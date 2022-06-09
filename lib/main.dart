@@ -92,19 +92,10 @@ class _MyHomePageState extends State<MyHomePage> {
       body: PageView(
         controller: pageController,
         physics: const NeverScrollableScrollPhysics(),
-        children: [
-          WebView(
-            initialUrl: 'https://flutter.dev/',
-            onProgress: (progress) => print('1: $progress'),
-          ),
-          WebView(
-            initialUrl: 'https://flutter.dev/',
-            onProgress: (progress) => print('2: $progress'),
-          ),
-          WebView(
-            initialUrl: 'https://flutter.dev/',
-            onProgress: (progress) => print('3: $progress'),
-          ),
+        children: const [
+          WebView(initialUrl: 'https://flutter.dev/'),
+          WebView(initialUrl: 'https://flutter.dev/'),
+          WebView(initialUrl: 'https://flutter.dev/'),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
