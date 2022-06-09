@@ -36,7 +36,7 @@ class _MyAppState extends State<MyApp> {
         future: _navigateToHome,
         builder: (context, snapshot) {
           return MaterialApp(
-            initialRoute: MyHomePage.routeName,
+            initialRoute: SplashPage.routeName,
             navigatorKey: _navigatorKey,
             onGenerateRoute: (settings) {
               switch (settings.name) {
@@ -63,8 +63,8 @@ class SplashPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.redAccent,
+    return const Scaffold(
+      backgroundColor: Colors.redAccent,
     );
   }
 }
