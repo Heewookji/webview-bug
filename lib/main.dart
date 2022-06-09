@@ -33,27 +33,28 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-        future: _navigateToHome,
-        builder: (context, snapshot) {
-          return MaterialApp(
-            initialRoute: SplashPage.routeName,
-            navigatorKey: _navigatorKey,
-            onGenerateRoute: (settings) {
-              switch (settings.name) {
-                case SplashPage.routeName:
-                  return MaterialPageRoute(
-                    builder: (_) => const SplashPage(),
-                    settings: settings,
-                  );
-                default:
-                  return MaterialPageRoute(
-                    builder: (_) => const MyHomePage(),
-                    settings: settings,
-                  );
-              }
-            },
-          );
-        });
+      future: _navigateToHome,
+      builder: (context, snapshot) {
+        return MaterialApp(
+          initialRoute: SplashPage.routeName,
+          navigatorKey: _navigatorKey,
+          onGenerateRoute: (settings) {
+            switch (settings.name) {
+              case SplashPage.routeName:
+                return MaterialPageRoute(
+                  builder: (_) => const SplashPage(),
+                  settings: settings,
+                );
+              default:
+                return MaterialPageRoute(
+                  builder: (_) => const MyHomePage(),
+                  settings: settings,
+                );
+            }
+          },
+        );
+      },
+    );
   }
 }
 
